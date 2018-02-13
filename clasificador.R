@@ -32,8 +32,17 @@ for (i in 1:length(data$client)) {
     }
   }
   activos = c(activos, contador >= limite)
+  
 }
 data$activo = activos
+for(i in 1:length(data$client)){
+  if(data$activo[i]==0){
+    data$activo[i]=1
+  }else{data$activo[i]=0}
+}
+
+write.csv(data,file = "inventariosActivos.csv")
+
 #aa <-c(limite,sum(data$activo),i-sum(data$activo))
 #activ <- rbind(activ,aa)
 

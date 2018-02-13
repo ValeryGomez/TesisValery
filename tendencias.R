@@ -34,6 +34,8 @@ for (i in 1:length(data$client)) {
   activos = c(activos, contador >= limite)
 }
 data$activo = activos
+
+
 ####
 Mtodas <- data()
 ##
